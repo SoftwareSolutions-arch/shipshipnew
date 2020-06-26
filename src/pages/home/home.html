@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button menuToggle>
+        <ion-icon class="header-icon" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Home</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only (click)="searchbox()">
+        <ion-icon class="search_icon" ios="ios-search" md="md-search" ></ion-icon>
+      </button>
+    </ion-buttons>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="inputbox">
+    <!-- <ion-searchbar class="searchbar" (ionInput)="getItems($event)"></ion-searchbar> -->
+    <ion-searchbar class="searchbar"></ion-searchbar>
+
+  </div>
+  <p class="paragraph">Recent</p>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <div class="row">
+          <div class="col-md-4" (click)="openDetailpage()">
+            <img class="Group_icon" src="../../assets/icon/Group 5282.png">
+          </div>
+          <div class="col-md-8" (click)="openDetailpage()">
+            <div class="new_text">Courier Name</div>
+            <span class="price_text">Sender(DHL)</span>
+          </div>
+          <img (click)="editParcel()" class="edit_icon" src="../../assets/icon/Icon material-edit.png">
+          <div (click)="openDetailpage()" class="tracking_id">Tracking Id: FEDEX 123456</div>
+          <div (click)="openDetailpage()" class="date_detail">May 26,2020 4:30PM</div>
+        </div>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button (click)="favorite(item)">
+          <ion-icon ios="ios-archive" md="md-archive"></ion-icon>Archive
+        </button>
+        <button ion-button color="danger" (click)="share(item)">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <div class="row">
+          <div class="col-md-4" (click)="openDetailpage()">
+            <img class="Group_icon" src="../../assets/icon/Group 5282.png">
+          </div>
+          <div class="col-md-8" (click)="openDetailpage()">
+            <div class="new_text">Courier Name</div>
+            <span class="price_text">Sender(DHL)</span>
+          </div>
+          <img (click)="editParcel()" class="edit_icon" src="../../assets/icon/Icon material-edit.png">
+          <div (click)="openDetailpage()" class="tracking_id">Tracking Id: FEDEX 123456</div>
+          <div (click)="openDetailpage()" class="date_detail">May 26,2020 4:30PM</div>
+        </div>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button (click)="favorite(item)">
+          <ion-icon ios="ios-archive" md="md-archive"></ion-icon>Archive
+        </button>
+        <button ion-button color="danger" (click)="share(item)">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <div class="pay_button">
+    <button (click)="addNewParcel()" class="pay_button_inner" ion-button>Add New Parcel</button>
+  </div>
+</ion-footer>

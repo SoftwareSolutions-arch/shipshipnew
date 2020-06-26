@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>New Parcel</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only (click)="closeMenu()">
+        <ion-icon  class="search_icon" ios="ios-close" md="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="item_details">Let's Get Started</div>
+  <p class="description_text">Lorem Ipusm or ipusum as it sometime known </p>
+  <p class="description_text_details">is dummy text used in laying out print,graphic or web designs</p>
+  <div class="courier_details">Courier Detail</div>
+
+  <form>
+    <div class="tracking_input">
+      <div class="row">
+        <input class="tracking_input_box" type="text" placeholder="Tracking Number">
+        <img class="barcode_image" src="../../assets/icon/Image 1.png">
+      </div>
+    </div>
+    <div class="input_box">
+      <input class="input_fileds" type="text" placeholder="Courier">
+    </div>
+    <div class="input_box">
+      <input class="input_fileds" type="text" placeholder="Sender(Optional)">
+    </div>
+    <div class="input_box">
+      <input class="input_fileds" type="text" placeholder="Content(Optional)">
+    </div>
+  </form>  
+  <div class="pay_button">
+    <button (click)="addParcel()" class="pay_button_inner" ion-button >Add New Parcel</button>
+  </div> 
+</ion-content>
